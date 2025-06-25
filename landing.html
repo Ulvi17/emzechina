@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>阿塞拜疆房产投资 & TRP — MZ Law Firm</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=PingFang+SC:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #D60000; /* red */
+      --accent: #C79810; /* gold */
+      --neutral: #F5F5F5; /* light grey */
+      --white: #FFFFFF;
+    }
+
+    /* Reset & base */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "PingFang SC", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6rem;
+      background: var(--neutral);
+      color: #333;
+    }
+    h1, h2, h3, h4 { font-weight: 700; color: var(--primary); margin-bottom: 0.5em; }
+    p { margin-bottom: 1em; }
+
+    /* Layout helpers */
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 4vh 0; }
+    .btn-primary {
+      background: var(--primary);
+      color: var(--white);
+      padding: 0.8em 2em;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .btn-primary:hover { opacity: 0.9; }
+
+    /* Hero */
+    .hero {
+      height: 100vh;
+      background: url('hero-placeholder.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 0 1rem;
+    }
+    .hero-overlay { background: rgba(0,0,0,0.5); position: absolute; inset: 0; }
+    .hero-content { position: relative; z-index: 1; color: var(--white); }
+    .hero h1 { font-size: 2rem; }
+    .hero p { font-size: 1.1rem; margin: 1em 0 2em; }
+
+    /* Value Props */
+    .grid { display: grid; gap: 1.5rem; }
+    @media(min-width:768px){ .grid-2 { grid-template-columns: repeat(2, 1fr); } }
+    @media(min-width:992px){ .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+
+    /* Flowchart */
+    .flowchart { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
+    .step {
+      flex: 1 1 120px;
+      background: var(--white);
+      border-left: 4px solid var(--accent);
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    /* Table */
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.75rem; border: 1px solid #ddd; text-align: center; }
+    th { background: var(--accent); color: var(--white); }
+
+    /* Slider */
+    .slider { position: relative; overflow: hidden; }
+    .slides { display: flex; transition: transform 0.5s ease-in-out; }
+    .slide { min-width: 100%; flex-shrink: 0; text-align: center; background: var(--white); padding: 2rem; }
+    .slider-nav { position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; }
+    .nav-btn { background: rgba(0,0,0,0.3); color: var(--white); border: none; padding: 0.5em 1em; cursor: pointer; }
+
+    /* CTA */
+    .cta-section { background: var(--primary); color: var(--white); text-align: center; padding: 3rem 1rem; }
+    .cta-section p { margin-bottom: 1.5em; }
+
+    /* FAQ */
+    details { background: var(--white); margin-bottom: 0.5rem; padding: 1rem; border-radius: 4px; }
+    summary { cursor: pointer; font-weight: 600; }
+
+    /* Sticky Bar */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--primary);
+      color: var(--white);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.5rem;
+      z-index: 999;
+    }
+    .sticky-bar a { color: var(--white); text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 0.3em; }
+
+    /* Footer */
+    footer { background: #222; color: #ccc; text-align: center; padding: 2em 1em; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>通过投资阿塞拜疆房产，轻松拿下居留许可</h1>
+      <p>仅需 10 万马纳特（≈ 42 万人民币）房产，即可为您与家人获取 1 年期可续签 TRP。</p>
+      <button class="btn-primary">立即预约中文咨询</button>
+      <img id="wechatQR" src="wechat-placeholder.png" alt="微信二维码" style="width:120px;margin-top:1rem;">
+    </div>
+  </section>
+
+  <!-- Why Azerbaijan -->
+  <section class="container">
+    <h2>为什么选择阿塞拜疆？</h2>
+    <div class="grid grid-2">
+      <div class="card">“欧亚十字路口”战略位置，五小时航程覆盖欧洲中东中亚</div>
+      <div class="card">房价 2024 年同比上涨 9.8 %，租金收益率平均 6 % (数据来源：官方统计 & GlobalPropertyGuide)</div>
+      <div class="card">房产权受阿塞拜疆宪法第 29 条保护</div>
+      <div class="card">“一带一路”关键节点，对华合作项目持续增加</div>
+    </div>
+  </section>
+
+  <!-- Flowchart -->
+  <section class="container">
+    <h2>投资+获批全流程（6 步）</h2>
+    <div class="flowchart">
+      <div class="step">线上咨询</div>
+      <div class="step">房源甄选</div>
+      <div class="step">签署预协议/尽调</div>
+      <div class="step">公证过户</div>
+      <div class="step">递交移民局（45 天）</div>
+      <div class="step">领卡</div>
+    </div>
+  </section>
+
+  <!-- Fees Table -->
+  <section class="container">
+    <h2>费用速览</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>项目</th>
+          <th>金额</th>
+          <th>说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>最低房产价值</td>
+          <td><strong>100 000 AZN</strong></td>
+          <td>满足 TRP 法规</td>
+        </tr>
+        <tr>
+          <td>政府申请费</td>
+          <td>1 000 AZN</td>
+          <td>制卡+提交</td>
+        </tr>
+        <tr>
+          <td>律师全程包</td>
+          <td>3 500 USD 起</td>
+          <td>翻译、公证、税号、银行卡</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Case Slider -->
+  <section class="container">
+    <h2>投资回报案例</h2>
+    <div class="slider" id="caseSlider">
+      <div class="slides">
+        <div class="slide">巴库市中心海景一居：年租 7 %</div>
+        <div class="slide">白城区两居：短租 Airbnb 月均回报 9 %</div>
+        <div class="slide">商铺出租：企业长约 5 年，年租 8 %</div>
+      </div>
+      <!-- Navigation buttons -->
+      <div class="slider-nav">
+        <button class="nav-btn" onclick="prevSlide()">‹</button>
+        <button class="nav-btn" onclick="nextSlide()">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="container">
+    <h2>客户见证</h2>
+    <div class="grid grid-2">
+      <blockquote class="card">“不到两个月拿卡，租金每月微信到账。” —— 王女士·深圳</blockquote>
+      <blockquote class="card">“孩子已入读巴库英式学校。” —— 李先生·上海</blockquote>
+    </div>
+  </section>
+
+  <!-- Strong CTA -->
+  <section class="cta-section">
+    <h2>立即开启阿塞拜疆投资之旅</h2>
+    <p>每月限额 15 组客户，先到先得</p>
+    <button class="btn-primary">立即预约中文咨询</button>
+    <br>
+    <img id="wechatQR" src="wechat-placeholder.png" alt="微信二维码" style="width:120px;margin-top:1rem;">
+  </section>
+
+  <!-- FAQ -->
+  <section class="container">
+    <h2>常见问题</h2>
+    <details><summary>1. TRP 多久？可续签？</summary><p>首次 1 年，可无限次续签，前提是房产仍在持有。</p></details>
+    <details><summary>2. 家属随行政策？</summary><p>配偶及 18 岁以下子女可一并申请。</p></details>
+    <details><summary>3. 可远程购房吗？</summary><p>可授权律师公证代办，支持远程过户。</p></details>
+    <details><summary>4. 卖房后资格？</summary><p>出售房产将导致 TRP 失效，建议持有期间保持所有权。</p></details>
+    <details><summary>5. 税费与持有成本？</summary><p>房产税约 0.1%，无遗产税；律师团队提供详细税务筹划。</p></details>
+    <details><summary>6. 租金如何汇回？</summary><p>可通过银行转账或支付宝/微信跨境服务汇回人民币。</p></details>
+    <details><summary>7. 周期多久？</summary><p>通常 45 天完成批复并领卡。</p></details>
+    <details><summary>8. 能否贷款？</summary><p>外国人首付≥50%，具体利率视银行政策而定。</p></details>
+  </section>
+
+  <!-- Trust Badges -->
+  <section class="container" style="text-align:center;">
+    <h2>专业资质 & 信赖保障</h2>
+    <img src="badge-law.png" alt="律师协会徽章" style="height:60px;margin:0 10px;">
+    <img src="badge-azer.png" alt="阿塞拜疆官方徽章" style="height:60px;margin:0 10px;">
+    <img src="badge-beltroad.png" alt="一带一路合作" style="height:60px;margin:0 10px;">
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    版权所有 ©2025 <strong>MZ Law Firm</strong>｜地址：AZ1005 巴库市尼扎米区 XX 大街 15 号｜电话：+994-12-XXX-XXXX｜邮箱：info@mzlaw.az｜微信客服二维码
+    <br><br>
+    <em>免责声明：以上信息仅供参考，不构成正式法律意见。</em>
+  </footer>
+
+  <!-- Sticky Bottom Bar (Mobile) -->
+  <div class="sticky-bar">
+    <a href="#"><img src="phone-icon.svg" alt="电话" style="width:20px;"> 电话咨询</a>
+    <button class="btn-primary" style="padding:0.6em 1.2em;font-size:0.9rem;">立即预约</button>
+    <a href="#"><img src="wechat-icon.svg" alt="微信" style="width:20px;"> 微信客服</a>
+  </div>
+
+  <!-- Minimal JS for slider -->
+  <script>
+    let currentIndex = 0;
+    const slidesEl = document.querySelector('#caseSlider .slides');
+    const slides = document.querySelectorAll('#caseSlider .slide');
+
+    function updateSlider(){
+      slidesEl.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide(){
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlider();
+    }
+
+    function prevSlide(){
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlider();
+    }
+
+    /* Auto-play */
+    setInterval(nextSlide, 5000);
+  </script>
+</body>
+</html> 
