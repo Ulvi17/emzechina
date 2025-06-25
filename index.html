@@ -42,7 +42,7 @@
     /* Hero */
     .hero {
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1600585154340-be6161c22940?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1624529639400-38b7053744d2?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
       transition: background-image 1s ease-in-out;
       display: flex;
       align-items: center;
@@ -188,9 +188,9 @@
     <h2>投资回报案例</h2>
     <div class="slider" id="caseSlider">
       <div class="slides">
-        <div class="slide"><img src="https://images.unsplash.com/photo-1521886651164-6ca1e12bb6bc?auto=format&fit=crop&w=900&q=80" alt="海景一居"><p>巴库市中心海景一居：年租 7 %</p></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1559622214-5e4e8ea7adbd?auto=format&fit=crop&w=900&q=80" alt="白城区两居"><p>白城区两居：短租 Airbnb 月均回报 9 %</p></div>
-        <div class="slide"><img src="https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?auto=format&fit=crop&w=900&q=80" alt="商铺出租"><p>商铺出租：企业长约 5 年，年租 8 %</p></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1600585154156-1b395ef357e6?auto=format&fit=crop&w=900&q=80" alt="市中心公寓"><p>巴库市中心海景一居：年租 7 %</p></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1522708323590-69ecd3a8830c?auto=format&fit=crop&w=900&q=80" alt="白城区两居"><p>白城区两居：短租 Airbnb 月均回报 9 %</p></div>
+        <div class="slide"><img src="https://images.unsplash.com/photo-1532375810709-75b9dca1f2d4?auto=format&fit=crop&w=900&q=80" alt="商铺出租"><p>商铺出租：企业长约 5 年，年租 8 %</p></div>
       </div>
       <!-- Navigation buttons -->
       <div class="slider-nav">
@@ -278,9 +278,11 @@
 
     /* Hero background carousel */
     const heroImages = [
-      'https://images.unsplash.com/photo-1600585154340-be6161c22940?auto=format&fit=crop&w=1500&q=80', // modern home exterior
+      'https://images.unsplash.com/photo-1624529639400-38b7053744d2?auto=format&fit=crop&w=1500&q=80', // Baku Flame Towers skyline
+      'https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1500&q=80',     // Old City architecture
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80', // Caspian Sea breeze
-      'https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1500&q=80'  // cozy apartment interior
+      'https://images.unsplash.com/photo-1590490360181-217aaf26236f?auto=format&fit=crop&w=1500&q=80', // Luxury apartment interior
+      'https://images.unsplash.com/photo-1600585154340-be6161c22940?auto=format&fit=crop&w=1500&q=80'  // Modern home exterior
     ];
     let heroIdx = 0;
     const heroEl = document.querySelector('.hero');
