@@ -42,7 +42,7 @@
     /* Hero */
     .hero {
       height: 100vh;
-      background: url('https://images.unsplash.com/photo-1624529639400-38b7053744d2?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1581586991123-b9f1430fb71a?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
       transition: background-image 1s ease-in-out;
       display: flex;
       align-items: center;
@@ -114,6 +114,9 @@
 
     /* Footer */
     footer { background: #222; color: #ccc; text-align: center; padding: 2em 1em; font-size: 0.85rem; }
+
+    /* Testimonials */
+    .testimonial img.avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; margin-bottom: 0.8rem; }
   </style>
 </head>
 <body>
@@ -204,8 +207,14 @@
   <section class="container">
     <h2>客户见证</h2>
     <div class="grid grid-2">
-      <blockquote class="card">“不到两个月拿卡，租金每月微信到账。” —— 王女士·深圳</blockquote>
-      <blockquote class="card">“孩子已入读巴库英式学校。” —— 李先生·上海</blockquote>
+      <div class="card testimonial" style="text-align:center;">
+        <img src="https://images.unsplash.com/photo-1535551951406-a19828b0a76b?auto=format&fit=crop&w=300&q=80" alt="王女士头像" class="avatar">
+        <p>“不到两个月拿卡，租金每月微信到账。”<br><strong>王女士·深圳</strong></p>
+      </div>
+      <div class="card testimonial" style="text-align:center;">
+        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=300&q=80" alt="李先生头像" class="avatar">
+        <p>“孩子已入读巴库英式学校。”<br><strong>李先生·上海</strong></p>
+      </div>
     </div>
   </section>
 
@@ -278,6 +287,10 @@
 
     /* Hero background carousel */
     const heroImages = [
+      'https://images.unsplash.com/photo-1581586991123-b9f1430fb71a?auto=format&fit=crop&w=1500&q=80', // Flame Towers evening
+      'https://images.unsplash.com/photo-1549989472-33b35a3152a8?auto=format&fit=crop&w=1500&q=80', // Icherisheher Old City
+      'https://images.unsplash.com/photo-1611458667060-fd27b493751e?auto=format&fit=crop&w=1500&q=80', // Caspian Sea promenade
+      'https://images.unsplash.com/photo-1590402494683-7733aa9e9277?auto=format&fit=crop&w=1500&q=80', // Heydar Aliyev Center
       'https://images.unsplash.com/photo-1624529639400-38b7053744d2?auto=format&fit=crop&w=1500&q=80', // Baku Flame Towers skyline
       'https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1500&q=80',     // Old City architecture
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80', // Caspian Sea breeze
